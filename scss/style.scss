@@ -1,0 +1,812 @@
+// font-family: 'Adamina', serif;
+// font-family: 'Bevan', cursive;
+// font-family: 'Ewert', cursive;
+// font-family: 'Maiden Orange', cursive;
+$itemWidth: 268px;
+$blue: #1bbaf0;
+body {
+    @media (max-width: 767px) {
+        &.lock {
+            overflow: hidden;
+        }
+    }
+}
+html {
+    box-sizing: border-box;
+    font-family: "Adamina", cursive;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+    @media (max-width: 1400px) {
+        max-width: 1140px;
+    }
+    @media (max-width: 1140px) {
+        max-width: 960px;
+    }
+    @media (max-width: 960px) {
+        max-width: 720px;
+    }
+    @media (max-width: 767px) {
+        max-width: none;
+    }
+}
+.background {
+    background-image: url(../images/header_background.jpg);
+    background-position: center;
+}
+.header {
+    &__menu {
+        float: left;
+        width: 172px;
+        height: 270px;
+        background-color: black;
+        @media (max-width: 767px) {
+            top: -100%;
+            float: none;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            margin-top: 0px;
+            z-index: 10;
+            transition: all 0.3s ease 0s;
+            overflow: auto;
+            &.active {
+                top: 0;
+                margin-top: 37px;
+            }
+        }
+    }
+    &__burger {
+        display: none;
+        z-index: 50;
+
+        @media (max-width: 767px) {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: block;
+            width: 30px;
+            height: 20px;
+            z-index: 50;
+            &::before {
+                content: "";
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: 0;
+                position: absolute;
+                transition: all 0.3s ease 0s;
+            }
+            &::after {
+                content: "";
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                transition: all 0.3s ease 0s;
+            }
+            span {
+                position: absolute;
+                background-color: #fff;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;
+            }
+            &.active {
+                &::before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                }
+                span {
+                    transform: scale(0);
+                }
+            }
+        }
+    }
+
+    &__menu-list {
+        width: 118px;
+        height: 150px;
+        margin: 0px 15px 0px 39px;
+        font-family: "Maiden Orange", cursive;
+        font-size: 24px;
+        line-height: 1.38;
+        text-align: left;
+        @media (max-width: 767px) {
+            height: 100%;
+            width: 100%;
+            font-size: 54px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &__menu-item {
+    }
+    &__menu-item--active {
+    }
+    &__menu-link {
+        transition: all 0.35s ease 0s;
+        &:hover::after {
+            content: url(../images/menu_star.png);
+            position: relative;
+            overflow: visible;
+            left: 5px;
+            bottom: 3px;
+            transition: all 0.35s ease 0s;
+        }
+        &:active {
+            color: #1bbaf0;
+        }
+        &:link {
+            color: white;
+        }
+        &:visited {
+            color: white;
+        }
+        &:hover {
+            color: #1bbaf0;
+        }
+    }
+    &__logo {
+        text-shadow: 6px 10.4px 0 rgba(81, 81, 81, 0.75);
+        padding-top: 180px;
+        padding-right: 172px;
+        font-family: Bevan;
+        font-size: 130px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.1;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        @media (max-width: 1140px) {
+            font-size: 88px;
+        }
+        @media (max-width: 960px) {
+            padding-top: 160px;
+            font-size: 64px;
+            padding-right: 120px;
+        }
+        @media (max-width: 767px) {
+            padding-right: 0;
+            padding-top: 110px;
+        }
+    }
+    &__logo-stripe {
+        font-family: "Maiden Orange", cursive;
+        font-size: 24px;
+        line-height: 54px;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 70px;
+        text-transform: uppercase;
+        background-image: url(../images/stripe.png);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 3px;
+        padding-right: 172px;
+        padding-bottom: 80px;
+        &::after {
+            content: url(../images/stripe_star.png);
+            position: relative;
+            bottom: 5px;
+            left: 7px;
+        }
+        &::before {
+            content: url(../images/stripe_star.png);
+            position: relative;
+            bottom: 5px;
+            right: 7px;
+        }
+        @media (max-width: 1140px) {
+            font-size: 18px;
+            background-size: 330px;
+            line-height: 44px;
+            &::after {
+                bottom: 3px;
+                left: 5px;
+            }
+            &::before {
+                bottom: 3px;
+                right: 5px;
+            }
+        }
+        @media (max-width: 960px) {
+            font-size: 16px;
+            margin-top: 40px;
+            padding-right: 0;
+            margin-right: 120px;
+            background-size: 280px;
+            margin-left: 172px;
+            line-height: 38px;
+        }
+        @media (max-width: 767px) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}
+.menu {
+    &__border {
+        width: 137px;
+        height: 11px;
+        margin: 24px 18px 20px 18px;
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+}
+
+.poster-wrapper {
+    z-index: 1;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+//Секция poster
+
+.poster {
+    background-image: url(../images/poster_background.png);
+    text-align: center;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    &__border {
+        height: 11px;
+        background-image: url(../images/poster_border.png);
+    }
+    &-wrapper {
+        display: flex;
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
+    }
+    &__photo {
+        margin: 55px 83px 79px 0;
+        @media (max-width: 960px) {
+            margin: 35px 0 0 0;
+        }
+    }
+
+    &__photo-img {
+        height: 365px;
+        width: 365px;
+        border-radius: 500px;
+        box-shadow: 0 0 0 16px rgba(255, 255, 255, 0.144);
+        @media (max-width: 1140px) {
+            height: 282px;
+            width: 282px;
+            margin-left: 10px;
+        }
+    }
+    &__text {
+        width: 670px;
+        padding-top: 36px;
+        color: #fffffe;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+    &__text-main {
+        font-family: "Maiden Orange", cursive;
+        font-size: 48px;
+        text-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.07);
+        line-height: 1.15;
+        margin: 20px 0 17px 0;
+    }
+    &__text-date {
+        font-size: 48px;
+    }
+    &__text-days {
+        color: #1bbaf0;
+    }
+    &__text-name {
+        font-family: "Ewert", cursive;
+        font-size: 78px;
+        @media (max-width: 1140px) {
+            font-size: 60px;
+        }
+    }
+    &__text-subject {
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../images/subject_star.png) 0 0 no-repeat;
+            margin-bottom: 7px;
+            margin-right: 7px;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../images/subject_star.png) 0 0 no-repeat;
+            margin-bottom: 7px;
+            margin-left: 7px;
+        }
+    }
+    &__text-paragraph {
+        font-family: "Adamina", cursive;
+        font-size: 22px;
+        margin: 21px 0 28px 0;
+    }
+    &__btn-link {
+        background-color: #1bbaf0;
+        color: white;
+        width: 142px;
+        height: 46px;
+        border-radius: 21px;
+        display: inline-block;
+        line-height: 42px;
+        transition: all 0.35s ease 0s;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+.blue__line {
+    height: 10px;
+    background-color: #1bbaf0;
+}
+
+// Секция Steps
+
+.steps {
+    background-color: #31353d;
+    color: white;
+    &__wrapper {
+        display: flex;
+        padding: 50px 0;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        width: $itemWidth;
+    }
+
+    &__title {
+        position: relative;
+        font-family: "Adamina", serif;
+        font-size: 26px;
+        padding-bottom: 30px;
+        @media (max-width: 960px) {
+            font-size: 18px;
+        }
+        @media (max-width: 767px) {
+            padding-bottom: 0;
+            margin-bottom: 20px;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 51%;
+            margin: 0 0 0 -12px;
+            top: -50px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 11px solid #1bbaf0;
+        }
+        @media (max-width: 767px) {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    // ? тут надо разобраться
+
+    &__step-container {
+        padding-bottom: 35px;
+        margin-bottom: 25px;
+        background: url(../images/number_star.png) center bottom no-repeat;
+        position: relative;
+        font-family: "Ewert", cursive;
+        color: #c0c1c3;
+        font-size: 88px;
+        line-height: 88px;
+        position: relative;
+        overflow: hidden;
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 1px;
+            height: 10px;
+            right: $itemWidth/2;
+            margin-right: 12px;
+            background: url(../images/number_lines.png) center top repeat-x;
+            width: $itemWidth/2.2;
+            @media (max-width: 1140px) {
+                width: $itemWidth/3.5;
+            }
+            @media (max-width: 960px) {
+                right: 90px;
+                width: $itemWidth/4;
+            }
+            @media (max-width: 767px) {
+                width: 50%;
+                right: 50%;
+            }
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 1px;
+            height: 10px;
+            left: $itemWidth/2;
+            margin-left: 12px;
+            background: url(../images/number_lines.png) center top repeat-x;
+            width: $itemWidth/2.2;
+            @media (max-width: 1140px) {
+                width: $itemWidth/3.5;
+            }
+            @media (max-width: 960px) {
+                width: $itemWidth/4;
+                left: 90px;
+            }
+            @media (max-width: 767px) {
+                width: 50%;
+                left: 50%;
+            }
+        }
+    }
+    &__info {
+        font-family: "Adamina", serif;
+        font-size: 12px;
+        margin-bottom: 30px;
+        padding: 0 30px;
+        line-height: 20px;
+        @media (max-width: 960px) {
+            padding: 0 15px;
+        }
+    }
+    &__btn-link {
+        text-align: center;
+        background-color: white;
+        color: black;
+        width: 98px;
+        height: 38px;
+        border-radius: 21px;
+        box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+        display: inline-block;
+        line-height: 34px;
+        transition: all 0.35s ease 0s;
+        &:hover {
+            background-color: #1bbaf0;
+            color: white;
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+.gray__line {
+    height: 10px;
+    background-color: #c0c1c3;
+}
+
+// Секция info
+
+.info {
+    &__wrapper {
+        display: flex;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+    }
+    &__left {
+        margin-top: 60px;
+        padding-right: 40px;
+        background: url(../images/examples_border.png) right no-repeat round;
+        @media (max-width: 1140px) {
+            padding-right: 20px;
+        }
+        @media (max-width: 960px) {
+        }
+        @media (max-width: 767px) {
+            background: none;
+        }
+    }
+    &__examples {
+        display: flex;
+    }
+    &__example {
+        padding-right: 55px;
+        margin: 0 0 33px 0;
+        @media (max-width: 1140px) {
+            padding-right: 20px;
+        }
+        @media (max-width: 960px) {
+            padding-right: 10px;
+        }
+        &-img {
+            width: 190px;
+            height: 190px;
+            border-radius: 95px;
+            box-shadow: 10.4px 3.6px 0 0 #f5f5f5;
+            @media (max-width: 960px) {
+                width: 168px;
+                height: 168px;
+            }
+        }
+        &-title {
+            font-family: "Adamina", cursive;
+            font-size: 32px;
+            line-height: 40px;
+            padding: 20px 0;
+        }
+        &-link {
+            color: black;
+            transition: all 0.35s ease 0s;
+            &:visited {
+                color: black;
+            }
+            &:hover {
+                color: $blue;
+            }
+        }
+        &-text {
+            font-family: "Adamina", cursive;
+            font-size: 14px;
+            line-height: 22px;
+            color: #777777;
+        }
+    }
+    &__more {
+        font-family: "Adamina", cursive;
+        font-size: 18px;
+        display: block;
+        border-top: 2px dashed #e6e6e6;
+        padding: 26px 0 0 0;
+        font-size: 18px;
+        color: #31353d;
+        &-link {
+            background: url(../images/readmore_star.png) left center no-repeat;
+            padding: 0 0 0 18px;
+            transition: all 0.35s ease 0s;
+            &:visited {
+                color: #31353d;
+            }
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+    &__volunteer {
+        padding-left: 57px;
+        @media (max-width: 1140px) {
+            padding-left: 20px;
+        }
+        @media (max-width: 960px) {
+            padding-left: 15px;
+        }
+        &-title {
+            font-family: "Bevan", cursive;
+            font-size: 56px;
+            line-height: 55px;
+            color: $blue;
+            margin-top: 94px;
+            margin-bottom: 26px;
+            @media (max-width: 1140px) {
+                font-size: 40px;
+                line-height: 44px;
+            }
+            @media (max-width: 767px) {
+                margin-top: 32px;
+            }
+        }
+
+        &-subtitle {
+            font-family: "Adamina", cursive;
+            font-size: 23px;
+            line-height: 30px;
+        }
+
+        &-text {
+            font-family: "Adamina", cursive;
+            font-size: 14px;
+            line-height: 22px;
+            color: #777777;
+            margin-top: 19px;
+            margin-bottom: 31px;
+        }
+        &-link {
+            text-align: center;
+            width: $itemWidth/2;
+            height: 44px;
+            color: white;
+            background-color: #31353d;
+            border-radius: 21px;
+            display: inline-block;
+            padding: 12px 0 13px 0;
+            transition: all 0.35s ease 0s;
+            &:visited {
+                color: white;
+            }
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+}
+.travel {
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px rgba(31, 21, 10, 0.35);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/travel_background.jpg);
+        filter: blur(1px) brightness(0.65);
+        background-size: cover;
+    }
+    &__slogan {
+        position: relative;
+        font-family: "Bevan", cursive;
+        font-size: 61px;
+        line-height: 70px;
+        padding-top: 80px;
+        padding-bottom: 16px;
+        margin-top: 40px;
+        @media (max-width: 767px) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    &__text {
+        position: relative;
+        font-family: "Adamina", serif;
+        font-size: 22px;
+        line-height: 28px;
+        margin: 0 $itemWidth;
+        padding-top: 30px;
+        padding-bottom: 80px;
+        background: url(../images/travel_border.png) top repeat-x;
+        @media (max-width: 1140px) {
+            margin: 0;
+        }
+        @media (max-width: 960px) {
+            margin: 0;
+        }
+    }
+}
+.sponsors {
+    padding: 65px 0 50px;
+    @media (max-width: 960px) {
+        padding: 30px 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 960px) {
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+        }
+    }
+    &__sponsor {
+        transition: all 0.35s ease 0s;
+        @media (max-width: 960px) {
+        }
+        &:hover {
+            filter: brightness(1.2);
+        }
+    }
+    &__sponsor-link {
+    }
+
+    &__sponsor-img {
+    }
+}
+.footer {
+    background-color: lightgrey;
+    &__menu {
+        font-family: "Maiden Orange", cursive;
+        font-size: 18px;
+        line-height: 16px;
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    &__menu-list {
+        text-align: center;
+    }
+
+    &__menu-item ~ &__menu-item {
+        border-left: solid 1px #c0c1c3;
+    }
+    &__menu-item {
+        display: inline-block;
+        padding: 0 17px;
+    }
+
+    &__menu-item--active {
+        color: #1bbaf0;
+    }
+
+    &__menu-link {
+        transition: all 0.35s ease 0s;
+        &:active {
+            color: $blue;
+        }
+        &:link {
+            color: black;
+        }
+        &:visited {
+            color: black;
+        }
+        &:hover {
+            color: $blue;
+        }
+    }
+    &__social {
+        text-align: center;
+        &-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #c0c1c3;
+            border-radius: 50px;
+            margin: 0 7px;
+            color: white;
+            transition: all 0.35s ease 0s;
+            &:hover {
+                color: $blue;
+            }
+        }
+        &-img {
+            padding-top: 11px;
+        }
+    }
+    &__copy {
+        font-family: "Maiden Orange", cursive;
+        font-size: 17px;
+        line-height: 14px;
+        text-align: center;
+        padding: 37px 0;
+    }
+}
+
+// font-family: 'Adamina', serif;
+// font-family: 'Bevan', cursive;
+// font-family: 'Ewert', cursive;
+// font-family: 'Maiden Orange', cursive;
