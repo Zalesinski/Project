@@ -1059,7 +1059,6 @@ a {
         }
     }
 }
-// ! доделать адаптив
 .testimonials {
     &__head {
         color: #31353d;
@@ -1136,8 +1135,85 @@ a {
         margin-bottom: 34px;
     }
 }
-.container {
+
+// стили для exibition
+
+.slider {
+    border-top: 9px solid #1bbaf0;
+    border-bottom: 11px solid #c0c1c3;
+    &__title {
+        font: 32px "Adamina", serif;
+        margin-top: 40px;
+        @media (max-width: 960px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 767px) {
+            font-size: 26px;
+            margin-top: 20px;
+        }
+        @media (max-width: 576px) {
+            margin-top: 10px;
+            font-size: 22px;
+        }
+    }
+    &__container {
+    }
+
+    &__wrapper {
+        padding: 80px 0;
+        height: 100%;
+
+        @media (max-width: 960px) {
+            padding: 60px 0;
+        }
+        @media (max-width: 767px) {
+            padding: 40px 0;
+        }
+        @media (max-width: 576px) {
+            padding: 20px 0;
+        }
+    }
+
+    &__slide {
+    }
+
+    &__slide-img {
+        border-radius: 15px;
+        max-width: 100%;
+    }
 }
+
+.slider {
+    &__prev {
+        &::after {
+            color: $blue;
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+    }
+
+    &__next {
+        &::after {
+            color: $blue;
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+    }
+
+    &__scroll {
+        color: $blue;
+    }
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+    color: $blue;
+}
+
 @media (max-width: 1400px) {
 }
 @media (max-width: 1140px) {
