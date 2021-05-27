@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images\icon.png">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -36,53 +37,55 @@
                         <li class="header__menu-item header__menu-item--active"><a class="header__menu-link"
                                 href="./index.html">MAIN</a></li>
                         <li class="header__menu-item"><a class="header__menu-link" href="./about.html">ABOUT US</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="./exibition.html">EXIBITION</a>
+                        <li class="header__menu-item"><a class="header__menu-link header__menu-link--active"
+                                href="./exibition.html">EXIBITION</a>
                         </li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="">BLOG</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="">CONTACTS</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link" href="./blog.html">BLOG</a></li>
+                        <li class="header__menu-item"><a class="header__menu-link" href="./contacts.html">CONTACTS</a>
+                        </li>
                     </ul>
                     <img class="menu__border" src="images\menu_border.png" alt="">
                 </nav>
                 <div class="header__logo-wrap">
                     <div class="header__logo">Pantheon</div>
-                    <div class="header__logo-stripe">feel the spirit of history</div>
+                    <div class="header__logo-stripe">OF GREEK MYTHOLOGY</div>
                 </div>
             </div>
         </header>
     </div>
     <section class="slider">
         <div class="container">
-            <h1 class="slider__title">See these examples</h1>
+            <h1 class="slider__title">Here are some statues you can see in our museum</h1>
             <div class="slider__container swiper-container">
                 <!-- Additional required wrapper -->
                 <div class="slider__wrapper swiper-wrapper">
                     <!-- Slides -->
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img1.jpg" alt=""></div>
+                            src="images\exibition_img1.jpg" alt="Artemis" title="Artemis"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img2.jpg" alt=""></div>
+                            src="images\exibition_img2.jpg" alt="Hermes" title="Hermes"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img3.jpg" alt=""></div>
+                            src="images\exibition_img3.jpg" alt="The eldest son of Laocoon"
+                            title="The eldest son of Laocoon"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img4.jpg" alt=""></div>
+                            src="images\exibition_img4.jpg" alt="Achilles" title="Achilles"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img5.jpg" alt=""></div>
+                            src="images\exibition_img5.jpg" alt="Venus" title="Venus"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img6.jpg" alt=""></div>
+                            src="images\exibition_img6.jpg" alt="Minevra" title="Minevra"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img7.jpg" alt=""></div>
+                            src="images\exibition_img7.jpg" alt="Perseus" title="Perseus"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img8.jpg" alt=""></div>
+                            src="images\exibition_img8.jpg" alt="Ares" title="Ares"></div>
                     <div class="slider__slide swiper-slide"><img class="slider__slide-img"
-                            src="images\exibition_img9.jpg" alt=""></div>
+                            src="images\exibition_img9.jpg" alt="Hermes" title="Hermes"></div>
                 </div>
 
                 <!-- If we need navigation buttons -->
                 <div class="slider__prev swiper-button-prev"></div>
                 <div class="slider__next swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
 
-                <!-- If we need scrollbar -->
-                <div class="slider__scroll swiper-scrollbar"></div>
             </div>
         </div>
     </section>
@@ -95,10 +98,10 @@
                             href="./index.html">MAIN</a>
                     </li>
                     <li class="footer__menu-item"><a class="footer__menu-link" href="./about.html">ABOUT US</a></li>
-                    <li class="footer__menu-item"><a class="footer__menu-link" href="./exibition.html">EXIBITION</a>
-                    </li>
-                    <li class="footer__menu-item"><a class="footer__menu-link" href="">BLOG</a></li>
-                    <li class="footer__menu-item"><a class="footer__menu-link" href="">CONTACTS</a></li>
+                    <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link--active"
+                            href="./exibition.html">EXIBITION</a></li>
+                    <li class="footer__menu-item"><a class="footer__menu-link" href="./blog.html">BLOG</a></li>
+                    <li class="footer__menu-item"><a class="footer__menu-link" href="./contacts.html">CONTACTS</a></li>
                 </ul>
             </nav>
             <div class="footer__social">
@@ -122,6 +125,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="slider.js"></script>
 </body>
 
 </html>

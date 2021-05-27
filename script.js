@@ -1,3 +1,5 @@
+// меню-бургер
+
 $(document).ready(function() {
     $('.header__burger').on("click", function(click) {
         $('.header__burger, .header__menu').toggleClass('active');
@@ -5,48 +7,20 @@ $(document).ready(function() {
     });
 });
 
-const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
 
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+// карта
 
-    slidesPerView: 3,
-
-    spaceBetween: 50,
-
-    autoplay: {
-        delay: 5000,
-        stopOnLastSlide: false,
-        disableOnInteraction: false,
-        
-    },
-    speed: 600,
-
-    breakpoints: {
-      960: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
-      767: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      },
-    }
-
+function initMap() {
+   let map;
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 53.908939, lng: 27.522861 },
+    zoom: 15,
   });
+  let marker = new google.maps.Marker({
+    position: { lat: 53.908939, lng: 27.522861 },
+    map: map
+  })
+};
+
+
+
