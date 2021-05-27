@@ -152,6 +152,9 @@ a {
             text-align: center;
             margin: 0;
         }
+        @media (max-height: 362px) {
+            display: block;
+        }
     }
     &__menu-item {
     }

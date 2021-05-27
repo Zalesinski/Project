@@ -187,6 +187,12 @@ a {
   }
 }
 
+@media (max-height: 362px) {
+  .header__menu-list {
+    display: block;
+  }
+}
+
 .header__menu-link {
   -webkit-transition: all 0.35s ease 0s;
   transition: all 0.35s ease 0s;
