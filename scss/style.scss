@@ -45,9 +45,13 @@ a {
 }
 .background {
     background-image: url(../images/header_background.jpg);
-    background-position: center top;
+    background-position: left top;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover 1300px;
+    z-index: -1;
+    @media (max-width: 576px) {
+        background-size: cover 700px;
+    }
 }
 .header {
     &__menu {
@@ -1191,6 +1195,7 @@ a {
 .slider {
     border-top: 9px solid #1bbaf0;
     border-bottom: 11px solid #c0c1c3;
+    background-color: #fff;
     &__title {
         font: 32px "Adamina", serif;
         margin-top: 40px;
@@ -1217,9 +1222,9 @@ a {
         @media (max-width: 767px) {
             padding: 40px 0;
         }
-        @media (max-width: 576px) {
-            padding: 20px 0;
-        }
+        // @media (max-width: 576px) {
+        //     padding: 20px 0;
+        // }
     }
 
     &__slide-img {
@@ -1260,6 +1265,7 @@ a {
 }
 .contact {
     padding: 60px 0 64px;
+    background-color: #fff;
     &__location {
         &-head {
             font: 32px "Adamina", serif;
@@ -1489,6 +1495,7 @@ a {
     font-family: "Adamina", serif;
     color: #31353d;
     flex-basis: 63%;
+    background-color: #fff;
     &__wrapper {
         padding: 60px 0;
         display: flex;

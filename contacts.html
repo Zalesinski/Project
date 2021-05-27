@@ -55,80 +55,83 @@
                 </div>
             </div>
         </header>
-    </div>
-    <section class="contact">
-        <div class="container">
-            <div class="contact__location">
-                <h1 class="contact__location-head">
-                    Our Location
-                </h1>
-                <div id="map"></div>
-            </div>
-            <div class="contact__inner">
-                <div class="contact__info">
-                    <h1 class="contact__info-head">
-                        Contact Info
+        <section class="contact">
+            <div class="container">
+                <div class="contact__location">
+                    <h1 class="contact__location-head">
+                        Our Location
                     </h1>
-                    <h3 class="contact__info-title">
-                        Sed ut perspiciatis unde omnis iste natus error sit.
-                    </h3>
-                    <p class="contact__info-paragraph">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque et quasi
-                        architecto beatae vitae dicta sunt explicabo. Mornunc odio gravida atcursus neus a lorem.
-                        Maecenas tristique orci ac sem. Duis ultric pharetra magna.
-                    </p>
-                    <p class="contact__info-contacts">
-                        <span class="strong">The Company Name Inc.<br>
-                            9870 St Vincent Place,<br>
-                            Glasgow, DC 45 Fr 45.</span><br>
-                        Telephone: +1 800 603 6035<br>
-                        FAX: +1 800 889 9898<br>
-                        E-mail: <a class="contact__info-email"
-                            href="mailto:zalesinsky@gmail.com">zalesinsky@gmail.com</a>
-                    </p>
+                    <div id="map"></div>
                 </div>
-                <div class="contact__form">
-                    <div class="contact__form-head">
-                        Contact Form
+                <div class="contact__inner">
+                    <div class="contact__info">
+                        <h1 class="contact__info-head">
+                            Contact Info
+                        </h1>
+                        <h3 class="contact__info-title">
+                            Sed ut perspiciatis unde omnis iste natus error sit.
+                        </h3>
+                        <p class="contact__info-paragraph">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque et
+                            quasi
+                            architecto beatae vitae dicta sunt explicabo. Mornunc odio gravida atcursus neus a lorem.
+                            Maecenas tristique orci ac sem. Duis ultric pharetra magna.
+                        </p>
+                        <p class="contact__info-contacts">
+                            <span class="strong">The Company Name Inc.<br>
+                                9870 St Vincent Place,<br>
+                                Glasgow, DC 45 Fr 45.</span><br>
+                            Telephone: +1 800 603 6035<br>
+                            FAX: +1 800 889 9898<br>
+                            E-mail: <a class="contact__info-email"
+                                href="mailto:zalesinsky@gmail.com">zalesinsky@gmail.com</a>
+                        </p>
                     </div>
-                    <div class="contact__form-wrapper">
-                        <form id="form" class="contact__form-form" action="submit" novalidate>
-                            <div class="contact__form-inner">
+                    <div class="contact__form">
+                        <div class="contact__form-head">
+                            Contact Form
+                        </div>
+                        <div class="contact__form-wrapper">
+                            <form id="form" class="contact__form-form" action="submit" novalidate>
+                                <div class="contact__form-inner">
+                                    <div class="form-control">
+                                        <input type="text" class="contact__form-name" id="username" placeholder="Name">
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>Error message</small>
+                                    </div>
+                                    <div class="form-control ">
+                                        <input type="email" class="contact__form-email" id="email" placeholder="E-mail">
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>Error message</small>
+                                    </div>
+                                    <div class="form-control">
+                                        <input type="text" class="contact__form-subject" id="subject"
+                                            placeholder="Subject">
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>Error message</small>
+                                    </div>
+                                </div>
                                 <div class="form-control">
-                                    <input type="text" class="contact__form-name" id="username" placeholder="Name">
+                                    <textarea class="contact__form-message" id="message"
+                                        placeholder="Message"></textarea>
                                     <i class="fas fa-check-circle"></i>
                                     <i class="fas fa-exclamation-circle"></i>
                                     <small>Error message</small>
                                 </div>
-                                <div class="form-control ">
-                                    <input type="email" class="contact__form-email" id="email" placeholder="E-mail">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
-                                </div>
-                                <div class="form-control">
-                                    <input type="text" class="contact__form-subject" id="subject" placeholder="Subject">
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>Error message</small>
-                                </div>
-                            </div>
-                            <div class="form-control">
-                                <textarea class="contact__form-message" id="message" placeholder="Message"></textarea>
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small>Error message</small>
-                            </div>
-                            <input type="reset" class="contact__form-clear" name="clear" value="clear">
-                            <input type="submit" class="contact__form-submit" name="submit" value="send message">
+                                <input type="reset" class="contact__form-clear" name="clear" value="clear">
+                                <input type="submit" class="contact__form-submit" name="submit" value="send message">
 
-                        </form>
+                            </form>
+                        </div>
+
                     </div>
-
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <footer class="footer">
         <div class="container">
             <nav class="footer__menu">
