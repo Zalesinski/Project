@@ -1,0 +1,358 @@
+.blog {
+  font-family: "Adamina", serif;
+  color: #31353d;
+  flex-basis: 63%;
+  background-color: #fff;
+}
+
+.blog__wrapper {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .blog__wrapper {
+    flex-direction: column;
+  }
+}
+
+.blog__head {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.blog__article {
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.blog__article-info {
+  display: flex;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 494px) {
+  .blog__article-info {
+    flex-direction: column;
+  }
+}
+
+.blog__article-title {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #31353d;
+  display: inline-block;
+}
+
+.blog__article-author::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  color: #1bbaf0;
+  margin-right: 10px;
+}
+
+@media (max-width: 494px) {
+  .blog__article-author {
+    padding: 6px 3px;
+    border-bottom: 1px solid #d8d8da;
+  }
+}
+
+.blog__article-date {
+  padding-left: 10px;
+}
+
+.blog__article-date::before {
+  content: "\f073";
+  font-family: "Font Awesome 5 Free";
+  color: #1bbaf0;
+  margin-right: 10px;
+}
+
+@media (max-width: 494px) {
+  .blog__article-date {
+    padding: 6px 3px;
+    border-bottom: 1px solid #d8d8da;
+  }
+}
+
+.blog__article-views {
+  padding-left: 10px;
+}
+
+.blog__article-views::before {
+  content: "\f06e";
+  font-family: "Font Awesome 5 Free";
+  color: #1bbaf0;
+  margin-right: 10px;
+}
+
+@media (max-width: 494px) {
+  .blog__article-views {
+    padding: 6px 3px;
+    border-bottom: 1px solid #d8d8da;
+  }
+}
+
+.blog__article-comments {
+  padding-left: 10px;
+}
+
+.blog__article-comments::before {
+  content: "\f075";
+  font-family: "Font Awesome 5 Free";
+  color: #1bbaf0;
+  margin-right: 10px;
+}
+
+@media (max-width: 494px) {
+  .blog__article-comments {
+    padding: 6px 3px;
+    border-bottom: 1px solid #d8d8da;
+  }
+}
+
+.blog__article-img {
+  float: left;
+  width: 40%;
+  margin: 0 20px 20px 0;
+}
+
+@media (max-width: 576px) {
+  .blog__article-img {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.blog__article-footer {
+  padding-top: 30px;
+  clear: both;
+}
+
+.blog__btn-more {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 130px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__btn-more:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__btn-blog {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 130px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__btn-blog:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__btn-login {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 90px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 0 10px 0;
+}
+
+.blog__btn-login:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-1 {
+  text-align: center;
+  background-color: #1bbaf0;
+  color: white;
+  width: 64px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-1:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-2 {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 64px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-2:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-next {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 84px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-next:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-last {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 84px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-last:hover {
+  background-color: #1bbaf0;
+}
+
+.aside {
+  flex-basis: 35%;
+  color: #777;
+  font-size: 14px;
+}
+
+.categories {
+  font-family: "Adamina", serif;
+  color: #31353d;
+}
+
+@media (max-width: 767px) {
+  .categories {
+    margin-top: 30px;
+  }
+}
+
+.categories__head {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.categories__list {
+  color: #777;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.categories__category::before {
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 10px;
+}
+
+.categories__link {
+  color: #777;
+}
+
+.categories__link:hover {
+  color: #1bbaf0;
+}
+
+.poll {
+  margin-top: 50px;
+  font-family: "Adamina", serif;
+  color: #777;
+}
+
+.poll__head {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #31353d;
+}
+
+.poll__question {
+  padding-bottom: 15px;
+}
+
+.poll__option-percent {
+  float: right;
+}
+
+.poll__bar {
+  width: 100%;
+  height: 24px;
+  border: 1px solid #d8d8da;
+  margin: 3px 0 15px 0;
+}
+
+.poll__bar-fill {
+  height: 20px;
+  background-color: #1bbaf0;
+  margin: 1px;
+}
+
+.poll__total {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.poll__older {
+  font-size: 16px;
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 130px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+}
+
+.poll__older:hover {
+  background-color: #1bbaf0;
+}

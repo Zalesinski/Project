@@ -1,0 +1,254 @@
+#map {
+  height: 300px;
+  width: 100%;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.contact {
+  padding: 60px 0 64px;
+  background-color: #fff;
+}
+
+.contact__location-head {
+  font: 32px "Adamina", serif;
+  margin-bottom: 30px;
+}
+
+.contact__inner {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .contact__inner {
+    flex-direction: column;
+  }
+}
+
+.contact__info {
+  flex-basis: 33%;
+}
+
+.contact__info-head {
+  font: 32px "Adamina", serif;
+  margin-bottom: 30px;
+}
+
+.contact__info-title {
+  font: 23px "Adamina", serif;
+  margin-bottom: 14px;
+}
+
+.contact__info-paragraph {
+  color: #777;
+  font-family: "Adamina", serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.contact__info-contacts {
+  margin-bottom: 22px;
+  color: #777;
+  font-family: "Adamina", serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.contact__info-email {
+  color: #1bbaf0;
+}
+
+.contact__info-email:hover {
+  color: #777;
+}
+
+.contact__form {
+  flex-basis: 65%;
+}
+
+.contact__form-head {
+  font: 32px "Adamina", serif;
+  margin-bottom: 30px;
+}
+
+.contact__form-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+  .contact__form-inner {
+    flex-direction: column;
+  }
+}
+
+.contact__form-name {
+  border: 1px solid #d8d8da;
+  color: #777;
+  font: 14px "Adamina", serif;
+  padding: 5px 10px 6px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .contact__form-name {
+    width: 100%;
+  }
+}
+
+.contact__form-email {
+  border: 1px solid #d8d8da;
+  color: #777;
+  font: 14px "Adamina", serif;
+  padding: 5px 10px 6px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .contact__form-email {
+    width: 100%;
+  }
+}
+
+.contact__form-subject {
+  border: 1px solid #d8d8da;
+  color: #777;
+  font: 14px "Adamina", serif;
+  padding: 5px 10px 6px;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .contact__form-subject {
+    width: 100%;
+  }
+}
+
+.contact__form-message {
+  border: 1px solid #d8d8da;
+  color: #777;
+  font: 14px "Adamina", serif;
+  padding: 5px 10px 6px;
+  display: block;
+  width: 100%;
+  min-height: 145px;
+  resize: vertical;
+}
+
+.contact__form-clear {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 90px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  border: none;
+  font: 16px "Adamina", serif;
+  padding-bottom: 3px;
+  margin-right: 10px;
+}
+
+.contact__form-clear:hover {
+  background-color: #1bbaf0;
+}
+
+@media (max-width: 767px) {
+  .contact__form-clear {
+    margin-bottom: 20px;
+  }
+}
+
+.contact__form-submit {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 160px;
+  height: 44px;
+  border-radius: 21px;
+  box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  transition: all 0.35s ease 0s;
+  border: none;
+  font: 16px "Adamina", serif;
+  padding-bottom: 3px;
+}
+
+.contact__form-submit:hover {
+  background-color: #1bbaf0;
+}
+
+@media (max-width: 767px) {
+  .contact__form-submit {
+    margin-bottom: 20px;
+  }
+}
+
+.form-control {
+  flex-basis: 30%;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 10px;
+  left: 3px;
+  font: 16px "Adamina", serif;
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.success i.fa-check-circle {
+  visibility: visible;
+  color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.success textarea {
+  border-color: #2ecc71;
+}
+
+.form-control.error textarea {
+  border-color: #e74c3c;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
+  font-size: 12px;
+}
+
+@media (max-width: 960px) {
+  .form-control.error small {
+    font-size: 10px;
+  }
+}
