@@ -1,4 +1,4 @@
-// меню-бургер
+// Меню-бургер
 
 $(document).ready(function() {
     $('.header__burger').on("click", function(click) {
@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 
-// карта
+// Карта
 
 function initMap() {
    let map;

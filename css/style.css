@@ -1645,6 +1645,13 @@ a {
   max-width: 100%;
 }
 
+@media (max-height: 500px) {
+  .slider__slide-img {
+    max-width: 50%;
+    margin-left: 25%;
+  }
+}
+
 .slider__prev::after {
   color: #1bbaf0;
 }
@@ -2153,6 +2160,86 @@ a {
   background-color: #1bbaf0;
 }
 
+.blog__page-1 {
+  text-align: center;
+  background-color: #1bbaf0;
+  color: white;
+  width: 64px;
+  height: 44px;
+  border-radius: 21px;
+  -webkit-box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+          box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  -webkit-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-1:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-2 {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 64px;
+  height: 44px;
+  border-radius: 21px;
+  -webkit-box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+          box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  -webkit-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-2:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-next {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 84px;
+  height: 44px;
+  border-radius: 21px;
+  -webkit-box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+          box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  -webkit-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-next:hover {
+  background-color: #1bbaf0;
+}
+
+.blog__page-last {
+  text-align: center;
+  background-color: #4d5057;
+  color: white;
+  width: 84px;
+  height: 44px;
+  border-radius: 21px;
+  -webkit-box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+          box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+  display: inline-block;
+  line-height: 40px;
+  -webkit-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+  margin: 0 15px 10px 0;
+}
+
+.blog__page-last:hover {
+  background-color: #1bbaf0;
+}
+
 .aside {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
@@ -2163,6 +2250,12 @@ a {
 .categories {
   font-family: "Adamina", serif;
   color: #31353d;
+}
+
+@media (max-width: 767px) {
+  .categories {
+    margin-top: 30px;
+  }
 }
 
 .categories__head {

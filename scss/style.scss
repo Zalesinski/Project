@@ -24,6 +24,9 @@ a {
     text-decoration: none;
     transition: all 0.35s ease 0s;
 }
+
+// Адаптивный контейнер
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -43,6 +46,9 @@ a {
         max-width: none;
     }
 }
+
+// Фоновое изображение
+
 .background {
     background-image: url(../images/header_background.jpg);
     background-position: left top;
@@ -53,6 +59,9 @@ a {
         background-size: cover 700px;
     }
 }
+
+// Хедер и меню, для всех страниц
+
 .header {
     &__menu {
         float: left;
@@ -311,13 +320,13 @@ a {
     }
 }
 
+// Секция poster
+
 .poster-wrapper {
     z-index: 1;
     display: flex;
     padding-bottom: 30px;
 }
-
-//Секция poster
 
 .poster {
     background-image: url(../images/poster_background.png);
@@ -585,7 +594,7 @@ a {
     background-color: #c0c1c3;
 }
 
-// Секция info
+// Секция Info
 
 .info {
     &__wrapper {
@@ -752,6 +761,9 @@ a {
         }
     }
 }
+
+// Секция Travel
+
 .travel {
     position: relative;
     text-align: center;
@@ -804,6 +816,9 @@ a {
         }
     }
 }
+
+// Секция Sponsors
+
 .sponsors {
     padding: 50px 0;
     @media (max-width: 960px) {
@@ -836,6 +851,9 @@ a {
     &__sponsor-img {
     }
 }
+
+// Футер
+
 .footer {
     background-color: lightgrey;
     &__menu {
@@ -918,7 +936,9 @@ a {
     }
 }
 
-// ! Правила уникальный для страницы About us
+// Стили для страницы About us
+
+// Секция About us
 
 .about-us {
     background: #31353d;
@@ -979,6 +999,9 @@ a {
         }
     }
 }
+
+// Секция Offer
+
 .offer {
     background-color: #f5f5f5;
     color: black;
@@ -1116,6 +1139,9 @@ a {
         }
     }
 }
+
+// Секция Testimonials
+
 .testimonials {
     &__head {
         color: #31353d;
@@ -1193,12 +1219,15 @@ a {
     }
 }
 
-// стили для exibition
+// Cтили для страницы Exibition
+
+// Стили слайдера
 
 .slider {
     border-top: 9px solid #1bbaf0;
     border-bottom: 11px solid #c0c1c3;
     background-color: #fff;
+
     &__title {
         font: 32px "Adamina", serif;
         margin-top: 40px;
@@ -1214,7 +1243,8 @@ a {
             font-size: 22px;
         }
     }
-
+    &__container {
+    }
     &__wrapper {
         padding: 80px 0;
         height: 100%;
@@ -1225,14 +1255,15 @@ a {
         @media (max-width: 767px) {
             padding: 40px 0;
         }
-        // @media (max-width: 576px) {
-        //     padding: 20px 0;
-        // }
     }
 
     &__slide-img {
         border-radius: 15px;
         max-width: 100%;
+        @media (max-height: 500px,) {
+            max-width: 50%;
+            margin-left: 25%;
+        }
     }
     &__prev {
         &::after {
@@ -1253,16 +1284,23 @@ a {
     }
 }
 
+// Пагинации для слайдера
+
 .swiper-pagination-bullet-active {
     background-color: $blue !important;
 }
 
-//стили страницы contacts
+// Стили страницы contacts
+
+// Стили карты
 
 #map {
     height: 300px;
     width: 100%;
 }
+
+// Стили для контактов и формы
+
 .strong {
     font-weight: bold;
 }
@@ -1433,7 +1471,7 @@ a {
     }
 }
 
-// классы для form-control
+// Стили для валидации формы
 
 .form-control {
     flex-basis: 30%;
@@ -1492,7 +1530,9 @@ a {
     }
 }
 
-//стили страницы blog
+// Стили страницы Blog
+
+// Стили для секции Blog
 
 .blog {
     font-family: "Adamina", serif;
@@ -1666,20 +1706,79 @@ a {
         }
     }
 
-    &__page-1 {
+    &__page {
         &-1 {
+            text-align: center;
+            background-color: $blue;
+            color: white;
+            width: 64px;
+            height: 44px;
+            border-radius: 21px;
+            box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+            display: inline-block;
+            line-height: 40px;
+            transition: all 0.35s ease 0s;
+            margin: 0 15px 10px 0;
+            &:hover {
+                background-color: $blue;
+            }
         }
 
         &-2 {
+            text-align: center;
+            background-color: #4d5057;
+            color: white;
+            width: 64px;
+            height: 44px;
+            border-radius: 21px;
+            box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+            display: inline-block;
+            line-height: 40px;
+            transition: all 0.35s ease 0s;
+            margin: 0 15px 10px 0;
+            &:hover {
+                background-color: $blue;
+            }
         }
 
         &-next {
+            text-align: center;
+            background-color: #4d5057;
+            color: white;
+            width: 84px;
+            height: 44px;
+            border-radius: 21px;
+            box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+            display: inline-block;
+            line-height: 40px;
+            transition: all 0.35s ease 0s;
+            margin: 0 15px 10px 0;
+            &:hover {
+                background-color: $blue;
+            }
         }
 
         &-last {
+            text-align: center;
+            background-color: #4d5057;
+            color: white;
+            width: 84px;
+            height: 44px;
+            border-radius: 21px;
+            box-shadow: 3.5px 3.6px 7px 0 rgba(31, 21, 10, 0.35);
+            display: inline-block;
+            line-height: 40px;
+            transition: all 0.35s ease 0s;
+            margin: 0 15px 10px 0;
+            &:hover {
+                background-color: $blue;
+            }
         }
     }
 }
+
+// Стили для Aside
+
 .aside {
     flex-basis: 35%;
     color: #777;
@@ -1688,6 +1787,9 @@ a {
 .categories {
     font-family: "Adamina", serif;
     color: #31353d;
+    @media (max-width: 767px) {
+        margin-top: 30px;
+    }
     &__head {
         font-size: 32px;
         margin-bottom: 30px;
