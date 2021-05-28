@@ -1150,7 +1150,8 @@ a {
 }
 
 .footer__social-img {
-  padding-top: 11px;
+  margin-top: 11px;
+  height: 16px;
 }
 
 .footer__copy {
