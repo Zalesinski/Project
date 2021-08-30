@@ -58,6 +58,10 @@
   }
 }
 
+.slider__prev {
+  top: 90%;
+}
+
 .slider__prev::after {
   color: #1bbaf0;
 }
@@ -66,6 +70,10 @@
   .slider__prev::after {
     display: none;
   }
+}
+
+.slider__next {
+  top: 90%;
 }
 
 .slider__next::after {
@@ -78,6 +86,11 @@
   }
 }
 
+.swiper-pagination {
+  position: static;
+  margin-bottom: 10px;
+}
+
 .swiper-pagination-bullet-active {
-  background-color: #1bbaf0 !important;
+  background-color: #1bbaf0;
 }
